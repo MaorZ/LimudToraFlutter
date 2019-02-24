@@ -13,6 +13,8 @@ List<Lesson> mockLessons = [
       typeName: 'Gmara',
       typeValue: 1,
     ),
+    description:
+        'שיעור שבועי בספר התניא על פרשיות השבוע, עם כיבוד קל ותפילת ערבית',
   ),
   Lesson(
     data: 'Mishna Be Shnia',
@@ -22,6 +24,8 @@ List<Lesson> mockLessons = [
       typeName: 'Mishna',
       typeValue: 2,
     ),
+    description:
+        'ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ',
   ),
   Lesson(
     data: 'Tania Be Yavne',
@@ -31,6 +35,8 @@ List<Lesson> mockLessons = [
       typeName: 'Tania',
       typeValue: 3,
     ),
+    description:
+        'שיעור שבועי בספר התניא על פרשיות השבוע, עם כיבוד קל ותפילת ערבית',
   ),
   Lesson(
     data: 'Tania Be Yavne',
@@ -40,6 +46,8 @@ List<Lesson> mockLessons = [
       typeName: 'Tania',
       typeValue: 3,
     ),
+    description:
+        'שיעור שבועי בספר התניא על פרשיות השבוע, עם כיבוד קל ותפילת ערבית',
   ),
   Lesson(
     data: 'Tania Be Yavne',
@@ -49,6 +57,8 @@ List<Lesson> mockLessons = [
       typeName: 'Tania',
       typeValue: 3,
     ),
+    description:
+        'שיעור שבועי בספר התניא על פרשיות השבוע, עם כיבוד קל ותפילת ערבית',
   ),
   Lesson(
     data: 'Tania Be Yavne',
@@ -58,6 +68,8 @@ List<Lesson> mockLessons = [
       typeName: 'Tania',
       typeValue: 3,
     ),
+    description:
+        'שיעור שבועי בספר התניא על פרשיות השבוע, עם כיבוד קל ותפילת ערבית',
   ),
   Lesson(
     data: 'Tania Be Yavne',
@@ -67,6 +79,8 @@ List<Lesson> mockLessons = [
       typeName: 'Tania',
       typeValue: 3,
     ),
+    description:
+        'שיעור שבועי בספר התניא על פרשיות השבוע, עם כיבוד קל ותפילת ערבית',
   ),
   Lesson(
     data: 'Tania Be Yavne',
@@ -76,6 +90,8 @@ List<Lesson> mockLessons = [
       typeName: 'Tania',
       typeValue: 3,
     ),
+    description:
+        'שיעור שבועי בספר התניא על פרשיות השבוע, עם כיבוד קל ותפילת ערבית',
   ),
   Lesson(
     data: 'Tania Be Yavne',
@@ -85,6 +101,8 @@ List<Lesson> mockLessons = [
       typeName: 'Tania',
       typeValue: 3,
     ),
+    description:
+        'שיעור שבועי בספר התניא על פרשיות השבוע, עם כיבוד קל ותפילת ערבית',
   ),
   Lesson(
     data: 'Tania Be Yavne',
@@ -94,6 +112,8 @@ List<Lesson> mockLessons = [
       typeName: 'Tania',
       typeValue: 3,
     ),
+    description:
+        'שיעור שבועי בספר התניא על פרשיות השבוע, עם כיבוד קל ותפילת ערבית',
   ),
   Lesson(
     data: 'Tania Be Yavne',
@@ -103,6 +123,8 @@ List<Lesson> mockLessons = [
       typeName: 'Tania',
       typeValue: 3,
     ),
+    description:
+        'שיעור שבועי בספר התניא על פרשיות השבוע, עם כיבוד קל ותפילת ערבית',
   ),
   Lesson(
     data: 'Tania Be Yavne',
@@ -112,6 +134,8 @@ List<Lesson> mockLessons = [
       typeName: 'Tania',
       typeValue: 3,
     ),
+    description:
+        'שיעור שבועי בספר התניא על פרשיות השבוע, עם כיבוד קל ותפילת ערבית',
   ),
   Lesson(
     data: 'Tania Be Yavne',
@@ -121,6 +145,8 @@ List<Lesson> mockLessons = [
       typeName: 'Tania',
       typeValue: 3,
     ),
+    description:
+        'שיעור שבועי בספר התניא על פרשיות השבוע, עם כיבוד קל ותפילת ערבית',
   ),
   Lesson(
     data: 'Tania Be Yavne',
@@ -130,6 +156,8 @@ List<Lesson> mockLessons = [
       typeName: 'Tania',
       typeValue: 3,
     ),
+    description:
+        'שיעור שבועי בספר התניא על פרשיות השבוע, עם כיבוד קל ותפילת ערבית',
   ),
   Lesson(
     data: 'Tania Be Yavne',
@@ -139,6 +167,8 @@ List<Lesson> mockLessons = [
       typeName: 'Tania',
       typeValue: 3,
     ),
+    description:
+        'שיעור שבועי בספר התניא על פרשיות השבוע, עם כיבוד קל ותפילת ערבית',
   ),
 ];
 
@@ -147,6 +177,7 @@ class LessonsBloc {
   final _searchLessons = StreamController<LessonsQuery>();
 
   Stream<List<Lesson>> get lessons => _lessonsSubject.stream;
+
   StreamSink<LessonsQuery> get searchLessons => _searchLessons.sink;
 
   LessonsBloc() {

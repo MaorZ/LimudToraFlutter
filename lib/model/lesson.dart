@@ -3,8 +3,9 @@ class Lesson {
   final location;
   final DateTime time;
   final data;
+  final String description;
 
-  Lesson({this.type, this.location, this.time, this.data});
+  Lesson({this.type, this.location, this.time, this.data, this.description});
 }
 
 class LessonType {

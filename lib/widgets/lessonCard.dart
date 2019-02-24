@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:limud_tora/model/lesson.dart';
 import 'package:intl/intl.dart' as intl;
+import 'package:limud_tora/widgets/sizeFetcher.dart';
 import 'package:vector_math/vector_math_64.dart' as vectorMath;
 
 class LessonCard extends StatefulWidget {
@@ -14,8 +15,8 @@ class LessonCard extends StatefulWidget {
 }
 
 class LessonCardAnimation {
-  LessonCardAnimation(this.controller)
-      : cardHeight = Tween<double>(begin: 110.0, end: 250.0).animate(
+  LessonCardAnimation({this.controller, this.descriptionHeight})
+      : cardHeight = Tween<double>(begin: 110.0, end: (190.0 + descriptionHeight)).animate(
           CurvedAnimation(
             parent: controller,
             curve: Curves.easeIn,
@@ -41,13 +42,14 @@ class LessonCardAnimation {
             ),
           ),
         ),
-        detailsHeight = Tween<double>(begin: 0, end: 140.0).animate(
+        detailsHeight = Tween<double>(begin: 0, end: (80.0 + descriptionHeight)).animate(
           CurvedAnimation(
             parent: controller,
             curve: Curves.easeIn,
           ),
         );
 
+  final double descriptionHeight;
   final AnimationController controller;
   final Animation<double> cardHeight;
   final Animation<double> bottomRightRadius;
@@ -58,6 +60,7 @@ class LessonCardAnimation {
 class _LessonCardState extends State<LessonCard>
     with SingleTickerProviderStateMixin {
   bool _collapsed = false;
+  double descriptionHeight = 0.0;
   LessonCardAnimation animation;
   AnimationController controller;
   intl.DateFormat _timeFormatter;
@@ -70,13 +73,13 @@ class _LessonCardState extends State<LessonCard>
       duration: const Duration(milliseconds: 300),
       vsync: this,
     );
-    animation = LessonCardAnimation(controller);
+    animation = LessonCardAnimation(controller: controller, descriptionHeight: 60.0);
   }
 
   @override
   Widget build(BuildContext context) {
     return AnimatedBuilder(
-      animation: animation.controller,
+      animation: controller,
       builder: buildAnimatedLessonCard,
     );
   }
@@ -90,6 +93,18 @@ class _LessonCardState extends State<LessonCard>
       height: animation.cardHeight.value,
       child: Column(
         children: <Widget>[
+          descriptionHeight == 0.0
+              ? SizeFetcher(
+                  child: buildLessonDescription(false),
+                  getSize: (Size size) {
+                    setState(() {
+                      print(size);
+                      descriptionHeight = size.height;
+                      animation = LessonCardAnimation(controller: controller, descriptionHeight: descriptionHeight);
+                    });
+                  },
+                )
+              : Container(),
           Container(
             height: 110.0,
             child: buildCardMainPart(),
@@ -98,6 +113,39 @@ class _LessonCardState extends State<LessonCard>
         ],
       ),
     );
+  }
+
+  Container buildLessonDescription(bool withHeight) {
+    if (withHeight) {
+      return Container(
+        height: (animation.detailsHeight.value > 60
+            ? 60
+            : animation.detailsHeight.value),
+        padding: EdgeInsets.fromLTRB(40, 10, 15, 10),
+        child: Text(
+          widget.lesson.description,
+          style: TextStyle(
+            color: Color.fromRGBO(223, 223, 223, 1),
+            fontSize: 14.0,
+            fontWeight: FontWeight.w900,
+          ),
+          textDirection: TextDirection.rtl,
+        ),
+      );
+    } else {
+      return Container(
+        padding: EdgeInsets.fromLTRB(40, 10, 15, 10),
+        child: Text(
+          widget.lesson.description,
+          style: TextStyle(
+            color: Color.fromRGBO(223, 223, 223, 1),
+            fontSize: 14.0,
+            fontWeight: FontWeight.w900,
+          ),
+          textDirection: TextDirection.rtl,
+        ),
+      );
+    }
   }
 
   Row buildCardMainPart() {
@@ -247,14 +295,26 @@ class _LessonCardState extends State<LessonCard>
     );
   }
 
-  Container buildCardDetailsPart() {
-    return Container(
-      height: animation.detailsHeight.value,
-      decoration: BoxDecoration(
-        color: Color.fromRGBO(114, 114, 114, 1),
-        borderRadius: BorderRadius.only(
-          bottomRight: Radius.circular(10.0),
-          bottomLeft: Radius.circular(10.0),
+  ClipRect buildCardDetailsPart() {
+    return ClipRect(
+      child: Container(
+        height: animation.detailsHeight.value,
+        decoration: BoxDecoration(
+          color: Color.fromRGBO(114, 114, 114, 1),
+          borderRadius: BorderRadius.only(
+            bottomRight: Radius.circular(10.0),
+            bottomLeft: Radius.circular(10.0),
+          ),
+        ),
+        child: Column(
+          children: <Widget>[
+            buildLessonDescription(true),
+            Container(
+              height: (animation.detailsHeight.value > 60
+                  ? animation.detailsHeight.value - 60
+                  : 0),
+            )
+          ],
         ),
       ),
     );
