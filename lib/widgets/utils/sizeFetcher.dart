@@ -1,10 +1,10 @@
 import 'package:flutter/widgets.dart';
 
 class SizeFetcher extends StatefulWidget {
-  final Function(Size) getSize;
+  final Function(Size) sizeFetched;
   final Widget child;
 
-  SizeFetcher({@required this.getSize, @required this.child});
+  SizeFetcher({@required this.sizeFetched, @required this.child});
 
   @override
   _SizeFetcherState createState() => _SizeFetcherState();
@@ -26,7 +26,7 @@ class _SizeFetcherState extends State<SizeFetcher> {
   _getSizes() {
     final RenderBox widgetRenderBox = _fetchByKey.currentContext.findRenderObject();
     final widgetSize = widgetRenderBox.size;
-    widget.getSize(widgetSize);
+    widget.sizeFetched(widgetSize);
   }
 
   @override

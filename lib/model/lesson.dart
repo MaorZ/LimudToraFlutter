@@ -4,8 +4,11 @@ class Lesson {
   final DateTime time;
   final data;
   final String description;
+  final String lecturer;
+  final Duration duration;
+  final String synagogue;
 
-  Lesson({this.type, this.location, this.time, this.data, this.description});
+  Lesson({this.type, this.location, this.time, this.data, this.description, this.lecturer, this.duration, this.synagogue});
 }
 
 class LessonType {

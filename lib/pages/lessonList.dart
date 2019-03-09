@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:limud_tora/widgets/inheritedState.dart';
-import 'package:limud_tora/widgets/lessonCard.dart';
+import 'package:limud_tora/widgets/core/inheritedState.dart';
+import 'package:limud_tora/widgets/shared/lessonCard.dart';
 import '../model/lesson.dart';
 
 class LessonListPage extends StatefulWidget {

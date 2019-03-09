@@ -6,169 +6,69 @@ import 'dart:async';
 
 List<Lesson> mockLessons = [
   Lesson(
-    data: 'Gmara Ba Rama',
-    location: '123',
+    location: 'רחוב ערער 13, יבנה',
     time: DateTime.now(),
     type: LessonType(
-      typeName: 'Gmara',
+      typeName: 'גמרא',
       typeValue: 1,
     ),
     description:
         'שיעור שבועי בספר התניא על פרשיות השבוע, עם כיבוד קל ותפילת ערבית',
+    lecturer: 'הרב שמעון בניסטי',
+    duration: Duration(hours: 1),
+    synagogue: 'תמימי מנחם',
   ),
   Lesson(
-    data: 'Mishna Be Shnia',
-    location: '234',
+    location: 'רחוב האלון 13, יבנה',
     time: DateTime.now().add(Duration(days: 1, hours: 1)),
     type: LessonType(
-      typeName: 'Mishna',
+      typeName: 'משנה',
       typeValue: 2,
     ),
     description:
         'ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ארוך טקס ',
+    lecturer: 'הרב אבנר קווס',
+    duration: Duration(hours: 1, minutes: 30),
+    synagogue: 'שערי מנחם',
   ),
   Lesson(
-    data: 'Tania Be Yavne',
-    location: '345',
+    location: 'רחוב הדס 26, יבנה',
     time: DateTime.now().add(Duration(days: 2, hours: 2, minutes: 30)),
     type: LessonType(
-      typeName: 'Tania',
+      typeName: 'חיזוק',
       typeValue: 3,
     ),
     description:
         'שיעור שבועי בספר התניא על פרשיות השבוע, עם כיבוד קל ותפילת ערבית',
+    lecturer: 'הרב זמיר כהן',
+    duration: Duration(hours: 2),
+    synagogue: 'המרכזי בתל אביב',
   ),
   Lesson(
-    data: 'Tania Be Yavne',
-    location: '345',
+    location: 'האלון 26, יבנה',
     time: DateTime.now().add(Duration(days: 2)),
     type: LessonType(
-      typeName: 'Tania',
+      typeName: 'תניא',
       typeValue: 3,
     ),
     description:
         'שיעור שבועי בספר התניא על פרשיות השבוע, עם כיבוד קל ותפילת ערבית',
+    lecturer: 'הרב שמעון בניסטי',
+    duration: Duration(hours: 1),
+    synagogue: 'תמימי מנחם',
   ),
   Lesson(
-    data: 'Tania Be Yavne',
-    location: '345',
+    location: 'האלון 26, יבנה',
     time: DateTime.now().add(Duration(days: 2)),
     type: LessonType(
-      typeName: 'Tania',
+      typeName: 'תניא',
       typeValue: 3,
     ),
     description:
-        'שיעור שבועי בספר התניא על פרשיות השבוע, עם כיבוד קל ותפילת ערבית',
-  ),
-  Lesson(
-    data: 'Tania Be Yavne',
-    location: '345',
-    time: DateTime.now().add(Duration(days: 2)),
-    type: LessonType(
-      typeName: 'Tania',
-      typeValue: 3,
-    ),
-    description:
-        'שיעור שבועי בספר התניא על פרשיות השבוע, עם כיבוד קל ותפילת ערבית',
-  ),
-  Lesson(
-    data: 'Tania Be Yavne',
-    location: '345',
-    time: DateTime.now().add(Duration(days: 2)),
-    type: LessonType(
-      typeName: 'Tania',
-      typeValue: 3,
-    ),
-    description:
-        'שיעור שבועי בספר התניא על פרשיות השבוע, עם כיבוד קל ותפילת ערבית',
-  ),
-  Lesson(
-    data: 'Tania Be Yavne',
-    location: '345',
-    time: DateTime.now().add(Duration(days: 2)),
-    type: LessonType(
-      typeName: 'Tania',
-      typeValue: 3,
-    ),
-    description:
-        'שיעור שבועי בספר התניא על פרשיות השבוע, עם כיבוד קל ותפילת ערבית',
-  ),
-  Lesson(
-    data: 'Tania Be Yavne',
-    location: '345',
-    time: DateTime.now().add(Duration(days: 2)),
-    type: LessonType(
-      typeName: 'Tania',
-      typeValue: 3,
-    ),
-    description:
-        'שיעור שבועי בספר התניא על פרשיות השבוע, עם כיבוד קל ותפילת ערבית',
-  ),
-  Lesson(
-    data: 'Tania Be Yavne',
-    location: '345',
-    time: DateTime.now().add(Duration(days: 2)),
-    type: LessonType(
-      typeName: 'Tania',
-      typeValue: 3,
-    ),
-    description:
-        'שיעור שבועי בספר התניא על פרשיות השבוע, עם כיבוד קל ותפילת ערבית',
-  ),
-  Lesson(
-    data: 'Tania Be Yavne',
-    location: '345',
-    time: DateTime.now().add(Duration(days: 2)),
-    type: LessonType(
-      typeName: 'Tania',
-      typeValue: 3,
-    ),
-    description:
-        'שיעור שבועי בספר התניא על פרשיות השבוע, עם כיבוד קל ותפילת ערבית',
-  ),
-  Lesson(
-    data: 'Tania Be Yavne',
-    location: '345',
-    time: DateTime.now().add(Duration(days: 2)),
-    type: LessonType(
-      typeName: 'Tania',
-      typeValue: 3,
-    ),
-    description:
-        'שיעור שבועי בספר התניא על פרשיות השבוע, עם כיבוד קל ותפילת ערבית',
-  ),
-  Lesson(
-    data: 'Tania Be Yavne',
-    location: '345',
-    time: DateTime.now().add(Duration(days: 2)),
-    type: LessonType(
-      typeName: 'Tania',
-      typeValue: 3,
-    ),
-    description:
-        'שיעור שבועי בספר התניא על פרשיות השבוע, עם כיבוד קל ותפילת ערבית',
-  ),
-  Lesson(
-    data: 'Tania Be Yavne',
-    location: '345',
-    time: DateTime.now().add(Duration(days: 2)),
-    type: LessonType(
-      typeName: 'Tania',
-      typeValue: 3,
-    ),
-    description:
-        'שיעור שבועי בספר התניא על פרשיות השבוע, עם כיבוד קל ותפילת ערבית',
-  ),
-  Lesson(
-    data: 'Tania Be Yavne',
-    location: '345',
-    time: DateTime.now().add(Duration(days: 2)),
-    type: LessonType(
-      typeName: 'Tania',
-      typeValue: 3,
-    ),
-    description:
-        'שיעור שבועי בספר התניא על פרשיות השבוע, עם כיבוד קל ותפילת ערבית',
+    'שיעור שבועי בספר התניא על פרשיות השבוע, עם כיבוד קל ותפילת ערבית',
+    lecturer: 'הרב שמעון בניסטי',
+    duration: Duration(hours: 1),
+    synagogue: 'תמימי מנחם',
   ),
 ];
 

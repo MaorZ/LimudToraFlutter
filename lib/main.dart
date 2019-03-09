@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:limud_tora/blocs/lessons_bloc.dart';
 import 'package:limud_tora/pages/lessonList.dart';
-import 'package:limud_tora/widgets/inheritedState.dart';
+import 'package:limud_tora/widgets/core/inheritedState.dart';
 
 import './pages/lessonFinder.dart';
 

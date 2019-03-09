@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:limud_tora/model/lesson.dart';
-import 'package:limud_tora/widgets/inheritedState.dart';
+import 'package:limud_tora/widgets/core/inheritedState.dart';
 
 class LessonFinderPage extends StatelessWidget {
   @override
